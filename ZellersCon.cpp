@@ -2,9 +2,9 @@
   What this program does:
   • It reads dates from a file called "dates.txt". Each line looks like:  YYYY MMM DD
   • It checks if the date is real (e.g., February 29 only allowed in leap years).
-  • It uses Zeller’s acid trip to find out the weekday. (The creator fo this mejestic program was born on monday apparently.
+  • It uses Zeller’s acid trip to find out the weekday. (The creator fo this mejestic program was born on monday apparently.)
     For this formula, January and February are treated as months 13 and 14 of the
-    previous year, I dont know why but the assingment said so that is why i did it.
+    previous year.
   • It writes output sentences like "5 April 1998 is Sunday." into "daynames.txt".
     Invalid inputs become "is an invalid date."
 
@@ -12,24 +12,6 @@
   TL;DR: Feed it dates, it checks them, runs the standard Zeller formula, and prints the
          weekday in a readable sentence. If a date isn’t real, it tells you that too.
 */
-
-/*
-Genie asks me for 3 wishes
-i only need one
-
-          _.-^^---....,,^^
-      _--                  --_
-     <_                      _>
-        '''--. . , ; .--'''
-              | |   |
-           .-=||  | |=-.
-           `-=#$%&%$#=-'
-              | ;  :|
-     _____.,-#%&$@%#&#~,._____
-              Isreal
-*/
-
-
 
 #include <iostream>
 #include <fstream>
@@ -39,7 +21,9 @@ i only need one
 #include <unordered_map>
 
 using namespace std;
-// zeller had a massive acid trip and now you have to suffer. and by extension me but i lowkey like it ngl this is soo much more fun than my fuckass research. i hoinestly dont even rember C. well i leant C not C++ but you get me
+/* zeller had a massive acid trip and now you have to suffer and by extension me 
+but I lowkey like it ngl this is soo much more fun than my fuckass research.
+*/
 static bool isLeap(long long y) {
     return (y % 400 == 0) || (y % 4 == 0 && y % 100 != 0);
 }
@@ -97,7 +81,7 @@ static int weekday(long long year, int month, int day) {
 }
 
 static string weekday2(int h) {
-// switch case for your gay as requirements
+// switch case
     switch (h) {
         case 0: return "Saturday";
         case 1: return "Sunday";
@@ -135,7 +119,7 @@ int main() {
         string monthFull = fullMonth(m);
 
         if (m == 0 || !validDate(year, m, day)) {
-            if (m == 0) monthFull = mmm; // contongency plan for when you user fucks up 
+            if (m == 0) monthFull = mmm; // contongency plan for when your user fucks up 
             out << day << ' ' << monthFull << ' ' << year << " is an invalid date." << '\n';
             continue;
         }
