@@ -1,0 +1,16 @@
+5 April 1998 is Sunday.
+15 October 1976 is Friday.
+31 February 2000 is an invalid date.
+12 June 2025 is Thursday.
+31 September 2001 is an invalid date.
+25 December 1999 is Saturday.
+33 January 2022 is an invalid date.
+7 July 1913 is Monday.
+20 August 2002 is Tuesday.
+28 February 1987 is Saturday.
+29 February 2000 is Tuesday.
+8 March 2025 is Saturday.
+19 November 2023 is Sunday.
+10 October 2025 is Friday.
+
+Total Dates: 14
